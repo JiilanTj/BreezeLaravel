@@ -17,9 +17,10 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('email')->unique();
-            $table->string('nomorHP')->default('');;
-            $table->string('bank')->default('');;
-            $table->string('noRek')->default('');;
+            $table->integer('nomorHP')->default(0);
+            $table->string('bank')->default('');
+            $table->integer('noRek')->default(0);
+            $table->double('saldo')->default(0);
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();

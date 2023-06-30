@@ -45,6 +45,9 @@
                         <x-dropdown-link href="#">
                        Saldo: Rp.{{ Auth::user()->saldo }}
                         </x-dropdown-link>
+                        <x-dropdown-link href="#">
+                       Nomor HP: {{ Auth::user()->nomorHP }}
+                        </x-dropdown-link>
                         <hr class="border-gray-200">
 
                         <!-- Authentication -->
@@ -88,6 +91,9 @@
             <div class="px-4">
                 <div class="font-medium text-base text-gray-800">{{ Auth::user()->name }}</div>
                 <div class="font-medium text-sm text-gray-500">{{ Auth::user()->email }}</div>
+                <div class="font-medium text-sm text-gray-500">Bank : {{ Auth::user()->bank }}</div>
+                <div class="font-medium text-sm text-gray-500">No Rek : {{ Auth::user()->noRek }}</div>
+                <div class="font-medium text-sm text-gray-500">no HP : {{ Auth::user()->nomorHP }}</div>
                 <div class="font-medium text-sm text-gray-500">Saldo : {{ Auth::user()->saldo }}</div>
             </div>
 
