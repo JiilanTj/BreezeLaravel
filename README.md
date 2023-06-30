@@ -1,3 +1,11 @@
+<p>Cara update file migrate</p>
+
+1. Hapus terlebih dahulu table bersangkutan pada PhpMyAdmin
+2. Cek kembali apakah file migrate anda sudah sesuai
+3. copas ```php artisan migrate:refresh``` pada terminal direktori lokal anda
+4. cek kembali pada xampp, apakah semua table yang diinginkan sudah ada
+5. bila sesuai, maka proses update berhasil
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
 <p align="center">
@@ -62,3 +70,5 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+
