@@ -17,7 +17,6 @@ return new class extends Migration
             $table->id();
             $table->string('username')->default('');
             $table->string('name')->unique();
-            $table->string('email')->default('');
             $table->bigInteger('nomorHP')->default(0);
             $table->string('bank')->default('');
             $table->bigInteger('noRek')->default(0);
