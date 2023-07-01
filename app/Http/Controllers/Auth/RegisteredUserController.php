@@ -31,9 +31,10 @@ class RegisteredUserController extends Controller
     public function store(Request $request): RedirectResponse
     {
         $request->validate([
-            'name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'email', 'max:255', 'unique:'.User::class],
+            'username' => ['required', 'string', 'max:255'],
+            'name' => ['required', 'string', 'max:255', 'unique:'.User::class],
             'password' => ['required', 'confirmed', Rules\Password::defaults()],
+            'email' => ['required', 'string', 'email', 'max:255'],
             'nomorHP' => ['required', 'string', 'max:255'],
             'bank' => ['required', 'string', 'max:255'],
             'noRek' => ['required', 'string', 'max:255'],
@@ -56,14 +57,16 @@ class RegisteredUserController extends Controller
      * @return User
      */
     protected function createUser(array $data): User
-    {
-        return User::create([
-            'name' => $data['name'],
-            'email' => $data['email'],
-            'password' => Hash::make($data['password']),
-            'nomorHP' => $data['nomorHP'],
-            'bank' => $data['bank'],
-            'noRek' => $data['noRek'],
-        ]);
-    }
+{
+    return User::create([
+        'username' => $data['username'], // Update this line to use $data['username'] instead of $data['name']
+        'name' => $data['name'],
+        'email' => $data['email'],
+        'password' => Hash::make($data['password']),
+        'nomorHP' => $data['nomorHP'],
+        'bank' => $data['bank'],
+        'noRek' => $data['noRek'],
+    ]);
+}
+
 }

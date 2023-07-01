@@ -28,11 +28,20 @@ class AuthenticatedSessionController extends Controller
      */
     public function store(LoginRequest $request)
     {
-        $request->authenticate();
+        $credentials = [
+            'username' => $request->username,
+            'password' => $request->password,
+        ];
 
-        $request->session()->regenerate();
+        if (Auth::attempt($credentials)) {
+            $request->session()->regenerate();
 
-        return redirect()->intended(RouteServiceProvider::HOME);
+            return redirect()->intended(RouteServiceProvider::HOME);
+        }
+
+        return redirect()->back()->withErrors([
+            'username' => 'Invalid credentials.',
+        ]);
     }
 
     /**

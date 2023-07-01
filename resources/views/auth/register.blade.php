@@ -14,9 +14,16 @@
 
             <!-- Name -->
             <div>
-                <x-label for="name" :value="__('Name')" />
+                <x-label for="name" :value="__('Nama asli pada rekening')" />
 
                 <x-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus />
+            </div>
+
+            <!-- Username -->
+            <div>
+                <x-label for="username" :value="__('username')" />
+
+                <x-input id="username" class="block mt-1 w-full" type="text" name="username" :value="old('username')" required />
             </div>
 
             <!-- Email Address -->
@@ -44,7 +51,7 @@
                 <select id="bank" name="bank" class="block w-full mt-1 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm border-gray-300">
                     <option value="BCA">BCA</option>
                     <option value="BRI">BRI</option>
-                    <option value="BNI">BNI</option>
+                    <option value="MANDIRI">Mandiri</option>
                     <!-- Tambahkan opsi bank lainnya sesuai kebutuhan -->
                 </select>
                 <x-input-error :messages="$errors->get('bank')" class="mt-2" />
