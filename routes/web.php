@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\DepositController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\BankController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,5 +24,7 @@ Route::get('/dashboard', function () {
 })->middleware(['auth'])->name('dashboard');
 
 Route::get('/deposit',  [DepositController::class, 'index'])->name('deposit');
+Route::get('/deposit', [BankController::class, 'showDepositPage'])->name('deposit');
+
 
 require __DIR__.'/auth.php';
