@@ -20,7 +20,6 @@ class CreateTransaksiTable extends Migration
             $table->string('noRek');
             $table->string('transaksi');
             $table->decimal('nominal', 10, 2);                        
-            $table->timestamp('timestamp_perubahan_status')->nullable();
             $table->string('status');
         });
     }

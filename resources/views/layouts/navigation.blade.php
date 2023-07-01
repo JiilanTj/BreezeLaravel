@@ -49,7 +49,9 @@
                        Nomor HP: {{ Auth::user()->nomorHP }}
                         </x-dropdown-link>
                         <hr class="border-gray-200">
-
+                        <x-dropdown-link href="{{ route('deposit') }}">
+                            Deposit
+                        </x-dropdown-link>
                         <!-- Authentication -->
                         <form method="POST" action="{{ route('logout') }}">
                             @csrf
