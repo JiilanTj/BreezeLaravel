@@ -25,6 +25,7 @@ Route::get('/dashboard', function () {
 
 Route::get('/deposit',  [DepositController::class, 'index'])->name('deposit');
 Route::get('/deposit', [BankController::class, 'showDepositPage'])->name('deposit');
+Route::post('/simpan-transaksi', [BankController::class, 'simpanTransaksi'])->name('simpan.transaksi');
 
 
 require __DIR__.'/auth.php';
