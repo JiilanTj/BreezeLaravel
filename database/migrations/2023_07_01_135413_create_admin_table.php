@@ -15,9 +15,11 @@ return new class extends Migration
     {
         Schema::create('admin', function (Blueprint $table) {
             $table->id();
-            $table->string('NAMA_ADMIN')->unique();
+            $table->string('Nama_adm_bca')->unique();
             $table->string('BCA')->nullable();
+            $table->string('Nama_adm_bri')->unique();
             $table->string('BRI')->nullable();
+            $table->string('Nama_adm_MANDIRI')->unique();
             $table->string('MANDIRI')->nullable();
             $table->timestamps();
         });

@@ -40,7 +40,7 @@ class AuthenticatedSessionController extends Controller
         }
 
         return redirect()->back()->withErrors([
-            'username' => 'Invalid credentials.',
+            'username' => 'Username/Password salah.',
         ]);
     }
 
