@@ -22,19 +22,19 @@ class BankController extends Controller
             $admin = Admin::whereNotNull('BCA')->inRandomOrder()->first();
             if ($admin) {
                 $noRekAdmin = $admin->BCA;
-                $namaAdmin = $admin->NAMA_ADMIN;
+                $namaAdmin = $admin->Nama_adm_bca;
             }
         } elseif ($bank == 'BRI') {
             $admin = Admin::whereNotNull('BRI')->inRandomOrder()->first();
             if ($admin) {
                 $noRekAdmin = $admin->BRI;
-                $namaAdmin = $admin->NAMA_ADMIN;
+                $namaAdmin = $admin->Nama_adm_bri;
             }
         } elseif ($bank == 'MANDIRI') {
             $admin = Admin::whereNotNull('MANDIRI')->inRandomOrder()->first();
             if ($admin) {
                 $noRekAdmin = $admin->MANDIRI;
-                $namaAdmin = $admin->NAMA_ADMIN;
+                $namaAdmin = $admin->Nama_adm_MANDIRI;
             }
         }
 
@@ -64,21 +64,28 @@ public function simpanTransaksi(Request $request)
     // Menggunakan nilai $namaAdmin dari session
     $namaAdmin = session('namaAdmin');
 
-    // Simpan data ke dalam tabel transaksi
-    Transaksi::create([
-        'nominal' => $jumlahDepo,
-        'handler' => $namaAdmin,
-        'noRek' => $user->noRek,
-        'bank' => $user->bank,
-        'user_id' => $user->id,
-        'status' => 'pending',
-        'transaksi' => 'pending',
-    ]);
+    if ($request->has('batal')) {
+        // Hapus data namaAdmin dari session
+        $request->session()->forget('namaAdmin');
+        return redirect()->route('dashboard')->with('success', 'Batal Transaksi?');
+    } else {
+        // Simpan data ke dalam tabel transaksi
+        Transaksi::create([
+            'nominal' => $jumlahDepo,
+            'handler' => $namaAdmin,
+            'noRek' => $user->noRek,
+            'bank' => $user->bank,
+            'user_id' => $user->id,
+            'status' => 'pending',
+            'transaksi' => 'pending',
+        ]);
 
-    // Hapus data namaAdmin dari session setelah digunakan
-    $request->session()->forget('namaAdmin');
+        // Hapus data namaAdmin dari session setelah digunakan
+        $request->session()->forget('namaAdmin');
 
-    return redirect()->back()->with('success', 'Transaksi berhasil disimpan.');
+        return redirect()->route('dashboard')->with('success', 'Transaksi berhasil disimpan.');
+    }
 }
+
 
 }

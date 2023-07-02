@@ -26,14 +26,18 @@
             </div>
 
             <div class="flex flex-col sm:flex-row">
-                <button type="submit" class="bg-blue-500 text-white rounded-lg py-2 px-4 mb-2 sm:mb-0 sm:mr-2">Kirim</button>
-                <button class="bg-blue-500 text-white rounded-lg py-2 px-4">Batal</button>
+                <button type="submit" name="action" value="kirim" class="bg-blue-500 text-white rounded-lg py-2 px-4 mb-2 sm:mb-0 sm:mr-2">Kirim</button>
+                <button type="submit" name="action" value="batal" class="bg-blue-500 text-white rounded-lg py-2 px-4">
+                    <a href="{{ route('dashboard') }}">Batal</a>
+                </button>
+
             </div>
         </form>
     </div>
 
     <script>
-        document.getElementById("btnCopy").addEventListener("click", function () {
+        document.getElementById("btnCopy").addEventListener("click", function (event) {
+            event.preventDefault();
             var rekAdmin = document.getElementById("RekAdmin").textContent;
             navigator.clipboard.writeText(rekAdmin)
                 .then(function () {
