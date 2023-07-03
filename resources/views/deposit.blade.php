@@ -5,8 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Deposit</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="{{ asset('js/app.js') }}" defer></script>
 </head>
 <body class="bg-gray-100">
+
+            @include('layouts.navigation')
+
     <div class="container mx-auto p-4">
         <h1 class="text-2xl font-bold mb-4">Jumlah deposit</h1>
         <p class="bg-gray-200 rounded-lg py-2 px-4 mb-4">Jangan gunakan titik (.) pada nominal</p>

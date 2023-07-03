@@ -1,46 +1,53 @@
-
-<!DOCTYPE html>
-<html>
 <head>
     <title>Macau4D</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.15/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .success {
+            color: green;
+        }
+
+        .error {
+            color: red;
+        }
+    </style>
+    <script src="{{ asset('js/app.js') }}" defer></script>
 </head>
 <body>
-    <h1>Macau4D</h1>
+@include('layouts.navigation')
 
-    @if(session('success'))
-        <div style="color: green;">{{ session('success') }}</div>
-    @endif
+<div class="flex flex-col items-center justify-center min-h-screen">
+    <div class="w-1/2">
+        <h1 class="text-center">Macau4D</h1>
 
-    @if(session('error'))
-        <div style="color: red;">{{ session('error') }}</div>
-    @endif
+        @if(session('success'))
+            <div class="text-green-500">{{ session('success') }}</div>
+        @endif
 
-    <form action="/macau4d/submit" method="POST">
-        @csrf
+        @if(session('error'))
+            <div class="text-red-500">{{ session('error') }}</div>
+        @endif
 
-        <div>
-            <label for="angka1">Angka 1:</label>
-            <input type="number" id="angka1" name="angka1">
-            <label for="jumlah1">Jumlah 1:</label>
-            <input type="number" id="jumlah1" name="jumlah1">
-        </div>
+        <form action="/macau4d/submit" method="POST">
+            @csrf
 
-        <div>
-            <label for="angka2">Angka 2:</label>
-            <input type="number" id="angka2" name="angka2">
-            <label for="jumlah2">Jumlah 2:</label>
-            <input type="number" id="jumlah2" name="jumlah2">
-        </div>
+            @for ($i = 1; $i <= 10; $i++)
+    <div class="flex mb-4">
+        <label for="angka{{ $i }}" class="w-16">Angka {{ $i }}:</label>
+        <input type="number" id="angka{{ $i }}" name="angka{{ $i }}" class="border border-gray-300 px-2 py-1 rounded">
+        <label for="jumlah{{ $i }}" class="w-16">Jumlah {{ $i }}:</label>
+        <input type="number" id="jumlah{{ $i }}" name="jumlah{{ $i }}" class="border border-gray-300 px-2 py-1 rounded">
+    </div>
+            @endfor
 
-        <div>
-            <label for="angka3">Angka 3:</label>
-            <input type="number" id="angka2" name="angka3">
-            <label for="jumlah3">Jumlah 3:</label>
-            <input type="number" id="jumlah2" name="jumlah3">
-        </div>
 
-        <button type="submit">Submit</button>
-    </form>
+            <div class="flex justify-center">
+                <button type="submit" class="bg-green-500 text-white px-4 py-2 rounded">Submit</button>
+            </div>
+        </form>
+    </div>
+</div>
 </body>
-</html>
-

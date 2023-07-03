@@ -24,38 +24,21 @@ class Macau4DController extends Controller
     // Inisialisasi array untuk menyimpan data yang akan disimpan ke database
     $dataToStore = [];
 
-    // Cek dan tambahkan data baris pertama jika angka dan jumlah tidak kosong
-    if (!empty($request->input('angka1')) && !empty($request->input('jumlah1'))) {
-        $dataToStore[] = [
-            'user_id' => auth()->user()->id,
-            'angka' => $request->input('angka1'),
-            'jumlah' => $request->input('jumlah1'),
-            'status' => 'pending',
-        ];
-        $totalAngka += $request->input('jumlah1');
-    }
+    // Cek dan tambahkan data baris jika angka dan jumlah tidak kosong
+    for ($i = 1; $i <= 10; $i++) {
+    $angkaKey = 'angka' . $i;
+    $jumlahKey = 'jumlah' . $i;
 
-    // Cek dan tambahkan data baris kedua jika angka dan jumlah tidak kosong
-    if (!empty($request->input('angka2')) && !empty($request->input('jumlah2'))) {
+    if (!empty($request->input($angkaKey)) && !empty($request->input($jumlahKey))) {
         $dataToStore[] = [
             'user_id' => auth()->user()->id,
-            'angka' => $request->input('angka2'),
-            'jumlah' => $request->input('jumlah2'),
+            'angka' => $request->input($angkaKey),
+            'jumlah' => $request->input($jumlahKey),
             'status' => 'pending',
         ];
-        $totalAngka += $request->input('jumlah2');
+        $totalAngka += $request->input($jumlahKey);
     }
-
-    // Cek dan tambahkan data baris kedua jika angka dan jumlah tidak kosong
-    if (!empty($request->input('angka3')) && !empty($request->input('jumlah3'))) {
-        $dataToStore[] = [
-            'user_id' => auth()->user()->id,
-            'angka' => $request->input('angka3'),
-            'jumlah' => $request->input('jumlah3'),
-            'status' => 'pending',
-        ];
-        $totalAngka += $request->input('jumlah3');
-    }
+}
 
     // Cek apakah total angka lebih dari 0 dan saldo user cukup
     if ($totalAngka > 0 && $saldoUser >= $totalAngka) {
