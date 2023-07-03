@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -14,24 +15,25 @@
         <div style="color: red;">{{ session('error') }}</div>
     @endif
 
-    <form action="/macau4d/submit" method="POST">
+    <<form action="/macau4d/submit" method="POST">
         @csrf
 
         <div>
             <label for="angka1">Angka 1:</label>
-            <input type="number" id="angka1" name="angka1" required>
+            <input type="number" id="angka1" name="angka1">
             <label for="jumlah1">Jumlah 1:</label>
-            <input type="number" id="jumlah1" name="jumlah1" required>
+            <input type="number" id="jumlah1" name="jumlah1">
         </div>
 
         <div>
             <label for="angka2">Angka 2:</label>
-            <input type="number" id="angka2" name="angka2" required>
+            <input type="number" id="angka2" name="angka2">
             <label for="jumlah2">Jumlah 2:</label>
-            <input type="number" id="jumlah2" name="jumlah2" required>
+            <input type="number" id="jumlah2" name="jumlah2">
         </div>
 
         <button type="submit">Submit</button>
     </form>
 </body>
 </html>
+
