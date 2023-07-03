@@ -3,6 +3,7 @@
 use App\Http\Controllers\DepositController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BankController;
+use App\Http\Controllers\Macau4DController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,6 +19,11 @@ use App\Http\Controllers\BankController;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/macau4d', [Macau4DController::class, 'index']);
+Route::post('/macau4d/submit', [Macau4DController::class, 'submit']);
+
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');

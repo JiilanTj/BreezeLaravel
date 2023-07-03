@@ -24,6 +24,7 @@ class User extends Authenticatable
         'nomorHP',
         'bank',
         'noRek',
+        'saldo', // Menambahkan kolom saldo
     ];
 
     /**
