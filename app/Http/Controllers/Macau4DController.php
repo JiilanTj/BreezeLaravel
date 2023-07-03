@@ -46,6 +46,17 @@ class Macau4DController extends Controller
         $totalAngka += $request->input('jumlah2');
     }
 
+    // Cek dan tambahkan data baris kedua jika angka dan jumlah tidak kosong
+    if (!empty($request->input('angka3')) && !empty($request->input('jumlah3'))) {
+        $dataToStore[] = [
+            'user_id' => auth()->user()->id,
+            'angka' => $request->input('angka3'),
+            'jumlah' => $request->input('jumlah3'),
+            'status' => 'pending',
+        ];
+        $totalAngka += $request->input('jumlah3');
+    }
+
     // Cek apakah total angka lebih dari 0 dan saldo user cukup
     if ($totalAngka > 0 && $saldoUser >= $totalAngka) {
         // Kurangi saldo user dengan total angka
