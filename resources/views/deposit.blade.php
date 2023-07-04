@@ -10,34 +10,39 @@
 <body class="bg-gray-100">
 
             @include('layouts.navigation')
+        <div class="flex flex-row gap-x-4 items-center justify-center p-8" style="background-color: #fc8c2c">
+            <div class=" container bg-purple-700 gap-2 border-2 border-white rounded-xl border p-4 ">
+                <h1 class="text-2xl font-bold text-white mb-4">Jumlah deposit</h1>
+                <p class="rounded-lg py-2 text-white mb-4 w-3/4">Tulis 100 jika Ingin Deposit 100.000 Rupiah</p>
 
-    <div class="container mx-auto p-4">
-        <h1 class="text-2xl font-bold mb-4">Jumlah deposit</h1>
-        <p class="bg-gray-200 rounded-lg py-2 px-4 mb-4">Jangan gunakan titik (.) pada nominal</p>
+                <form action="{{ route('simpan.transaksi') }}" method="POST">
+                    @csrf
+                    <input id="jumlahDepo" name="jumlahDepo" type="number" class="border border-gray-300 rounded-lg p-2 mb-4">
 
-        <form action="{{ route('simpan.transaksi') }}" method="POST">
-            @csrf
-            <input id="jumlahDepo" name="jumlahDepo" type="number" class="border border-gray-300 rounded-lg p-2 mb-4">
+                    <h2 class="text-xl text-white font-bold mb-2">Nama rekening</h2>
+                    <p id="NamaRekAdmin">{{ $namaAdmin }}</p>
 
-            <h2 class="text-xl font-bold mb-2">Nama rekening</h2>
-            <p id="NamaRekAdmin">{{ $namaAdmin }}</p>
+                    <h2 class="text-xl text-white font-bold mb-2">No. Rekening</h2>
+                    <div class="flex items-center mb-4 space-x-4">
+                        <button id="bank" class="bg-blue-500 text-white rounded-lg py-2 px-4">{{ auth()->user()->bank }}</button>
+                        <p id="RekAdmin" class="mr-2 text-white">{{ $noRekAdmin }}</p>
+                        <button id="btnCopy" class="bg-blue-500 text-white rounded-lg py-2 px-4">Copy</button>
+                    </div>
 
-            <h2 class="text-xl font-bold mb-2">No. Rekening</h2>
-            <div class="flex items-center mb-4 space-x-4">
-                <button id="bank" class="bg-blue-500 text-white rounded-lg py-2 px-4">{{ auth()->user()->bank }}</button>
-                <p id="RekAdmin" class="mr-2">{{ $noRekAdmin }}</p>
-                <button id="btnCopy" class="bg-blue-500 text-white rounded-lg py-2 px-4">Copy</button>
+                 <div class="flex flex-col sm:flex-row">
+                    <button type="submit" name="action" value="kirim" class="bg-blue-500 text-white rounded-lg py-2 px-4 mb-2 sm:mb-0 sm:mr-2">Kirim</button>
+                    <button type="submit" name="action" value="batal" class="bg-blue-500 text-white rounded-lg py-2 px-4">
+                        <a href="{{ route('dashboard') }}">Batal</a>
+                    </button>
+
+                     </div>
+                 </form>
+            </div>
+            <div>
+                
             </div>
 
-            <div class="flex flex-col sm:flex-row">
-                <button type="submit" name="action" value="kirim" class="bg-blue-500 text-white rounded-lg py-2 px-4 mb-2 sm:mb-0 sm:mr-2">Kirim</button>
-                <button type="submit" name="action" value="batal" class="bg-blue-500 text-white rounded-lg py-2 px-4">
-                    <a href="{{ route('dashboard') }}">Batal</a>
-                </button>
-
-            </div>
-        </form>
-    </div>
+        </div>
 
     <script>
         document.getElementById("btnCopy").addEventListener("click", function (event) {

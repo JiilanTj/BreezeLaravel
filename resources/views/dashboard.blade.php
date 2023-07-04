@@ -1,22 +1,59 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Mengjudi') }}
+            Pilih Pools Gacormu
         </h2>
     </x-slot>
 
-    <div class="py-12">
+    <div class="py-2">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 bg-white border-b border-gray-200">
-                    <div class="bg-gray-200 p-4 rounded-lg">
-                        <h2 class="text-xl font-semibold mb-2">Countdown Menuju Waktu Terdekat</h2>
-                        <div id="countdownmacau" class="text-3xl text-white font-bold"></div>
+                    <div class="flex flex-row">
+                        <div style="width: 25%">
+                            <div class="h-full p-2">
+                                <a href="/macau4d">
+                                    <div class="p-4 rounded-lg h-full" style="background-color: #fc8c2c">
+                                        <h1 class="text-xl font-semibold mb-2" style="color: #541493">Macau Pools</h1>
+                                        <div id="countdownmacau" class="text-3xl text-white font-bold"></div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div style="width: 25%">
+                            <div class="h-full p-2">
+                                <a href="/macau4d">
+                                    <div class="p-4 rounded-lg h-full" style="background-color: #fc8c2c">
+                                        <h1 class="text-xl font-semibold mb-2" style="color: #541493">Hongkong Pools</h1>
+                                        <div id="countdownhongkong" class="text-3xl text-white font-bold"></div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div style="width: 25%">
+                            <div class="h-full p-2">
+                                <a href="/macau4d">
+                                    <div class="p-4 rounded-lg h-full" style="background-color: #fc8c2c">
+                                        <h1 class="text-2xl font-semibold mb-2" style="color: #541493">Sidney Pools</h1>
+                                        <div id="countdownsidney" class="text-3xl text-white font-bold"></div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div style="width: 25%">
+                            <div class="h-full p-2">
+                                <a href="/macau4d">
+                                    <div class="p-4 rounded-lg h-full" style="background-color: #fc8c2c">
+                                        <h1 class="text-2xl font-semibold mb-2" style="color: #541493">Singapore Pools</h1>
+                                        <div id="countdownsgp" class="text-3xl text-white font-bold"></div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="bg-gray-200 p-4 rounded-lg">
-                        <h2 class="text-xl font-semibold mb-2">Countdown Menuju Waktu Terdekat</h2>
-                        <div id="countdownhongkong" class="text-3xl text-white font-bold"></div>
-                    </div>
+
+                    
+                
 
                 </div>
             </div>
@@ -26,27 +63,34 @@
 
 <script>
         function countdown(targetTimes, countdownElement) {
-            const now = new Date().getTime();
-            const nearestTime = targetTimes.reduce((nearest, target) => {
-                const timeDiff = target - now;
-                if (timeDiff > 0 && (nearest === null || timeDiff < nearest)) {
-                    return timeDiff;
-                }
-                return nearest;
-            }, null);
+  const now = new Date().getTime();
+  const nearestTime = targetTimes.reduce((nearest, target) => {
+    const timeDiff = target - now;
+    if (timeDiff > 0 && (nearest === null || timeDiff < nearest.timeDiff)) {
+      return { timeDiff, target };
+    }
+    return nearest;
+  }, null);
 
-            if (nearestTime !== null) {
-                const hours = Math.floor((nearestTime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                const minutes = Math.floor((nearestTime % (1000 * 60 * 60)) / (1000 * 60));
-                const seconds = Math.floor((nearestTime % (1000 * 60)) / 1000);
+  if (nearestTime !== null) {
+    const timeDiff = nearestTime.timeDiff;
+    const target = nearestTime.target;
 
-                countdownElement.innerText = `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
-            }
+    const hours = Math.floor(timeDiff / (1000 * 60 * 60));
+    const minutes = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((timeDiff % (1000 * 60)) / 1000);
 
-            setTimeout(() => {
-                countdown(targetTimes, countdownElement);
-            }, 1000);
-        }
+    countdownElement.textContent = `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+  }
+
+  setTimeout(() => {
+    countdown(targetTimes, countdownElement);
+  }, 1000);
+}
+
+
+
+
 
         const targetTimesMacau = [
             new Date().setHours(16, 0, 0), // Misalnya, jam 16:00
@@ -57,10 +101,25 @@
         countdown(targetTimesMacau, countdownElementMacau);
 
         const targetTimesHongKong = [
-            new Date().setHours(17, 0, 0), // Misalnya, jam 17:00
-            new Date().setHours(21, 0, 0), // Misalnya, jam 21:00
+            
             new Date().setHours(23, 30, 0), // Misalnya, jam 23:30
         ];
         const countdownElementHongKong = document.getElementById('countdownhongkong');
         countdown(targetTimesHongKong, countdownElementHongKong);
+
+        const targetTimesSidney = [
+            
+            new Date().setHours(13, 35, 0), // Misalnya, jam 23:30
+        ];
+        const countdownElementSidney = document.getElementById('countdownsidney');
+        countdown(targetTimesSidney, countdownElementSidney);
+
+        const targetTimesSgp = [
+            
+            new Date().setHours(13, 35, 0), // Misalnya, jam 13:35
+        ];
+        const countdownElementSgp = document.getElementById('countdownsgp');
+        countdown(targetTimesSgp, countdownElementSgp);
+
+        
     </script>
