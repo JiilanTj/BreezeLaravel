@@ -34,7 +34,7 @@
                             <div class="h-full p-2">
                                 <a href="/macau4d">
                                     <div class="p-4 rounded-lg h-full" style="background-color: #fc8c2c">
-                                        <h1 class="text-2xl font-semibold mb-2" style="color: #541493">Sidney Pools</h1>
+                                        <h1 class="text-xl font-semibold mb-2" style="color: #541493">Sidney Pools</h1>
                                         <div id="countdownsidney" class="text-3xl text-white font-bold"></div>
                                     </div>
                                 </a>
@@ -44,12 +44,45 @@
                             <div class="h-full p-2">
                                 <a href="/macau4d">
                                     <div class="p-4 rounded-lg h-full" style="background-color: #fc8c2c">
-                                        <h1 class="text-2xl font-semibold mb-2" style="color: #541493">Singapore Pools</h1>
+                                        <h1 class="text-xl font-semibold mb-2" style="color: #541493">Singapore Pools</h1>
                                         <div id="countdownsgp" class="text-3xl text-white font-bold"></div>
                                     </div>
                                 </a>
                             </div>
                         </div>
+                    </div>
+                    <div class="flex flex-row">
+                        <div style="width: 25%">
+                            <div class="h-full p-2">
+                                <a href="/macau4d">
+                                    <div class="p-4 rounded-lg h-full" style="background-color: #fc8c2c">
+                                        <h1 class="text-xl font-semibold mb-2" style="color: #541493">Oregon Pools</h1>
+                                        <div id="countdownmacau" class="text-3xl text-white font-bold"></div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div style="width: 25%">
+                            <div class="h-full p-2">
+                                <a href="/macau4d">
+                                    <div class="p-4 rounded-lg h-full" style="background-color: #fc8c2c">
+                                        <h1 class="text-xl font-semibold mb-2" style="color: #541493">Taiwan Pools</h1>
+                                        <div id="countdownhongkong" class="text-3xl text-white font-bold"></div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div style="width: 25%">
+                            <div class="h-full p-2">
+                                <a href="/macau4d">
+                                    <div class="p-4 rounded-lg h-full" style="background-color: #fc8c2c">
+                                        <h1 class="text-xl font-semibold mb-2" style="color: #541493">Tokyo Pools</h1>
+                                        <div id="countdownsidney" class="text-3xl text-white font-bold"></div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        
                     </div>
 
                     

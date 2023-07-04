@@ -23,8 +23,11 @@
     <body class="antialiased">
     @include('layouts.header')
             <hr>
-    <br>
+    
+    <div>
+        <img src="{{ asset('assets/banner 1.png') }}" alt="Logo" class="">
+    </div>
 
-    <!-- Kerjain aja disini bang buat halaman belum login -->
+    
     </body>
 </html>
