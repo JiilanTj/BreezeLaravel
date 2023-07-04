@@ -33,50 +33,62 @@
 
 <div class="flex flex-col gap-y-4 items-center justify-center p-8" style="background-color: #fc8c2c">
     
-    <div class="flex bg-purple-700 border-2 border-white rounded-xl border p-4  border-white">
-        <div style="width: 14.28%">
-        <button class="mx-2 px-4 py-1 text-white rounded-lg hover:bg-blue-600" style="background-color: #fc8c2c">
-                <a href="/login">4D</a>
+<div class="flex flex-col bg-purple-700 gap-2 border-2 border-white rounded-xl border p-4 border-white">
+    <div class="flex gap-2 flex-row">
+        <div style="width: 25%">
+            <button class="mx-2 px-4 py-1 text-white rounded-lg hover:bg-blue-600 h-14 w-full" style="background-color: #fc8c2c">
+                <a href="/macau4d">4D</a>
             </button>
         </div>
-        <div style="width: 14.28%">
-        <button class="mx-2 px-4 py-1 text-white rounded-lg hover:bg-blue-600" style="background-color: #fc8c2c">
-                <a href="/login">4D</a>
+        <div style="width: 25%">
+            <button class="mx-2 px-4 py-1 text-white rounded-lg hover:bg-blue-600 h-14 w-full" style="background-color: #fc8c2c">
+                <a href="/login">4D Campuran</a>
             </button>
         </div>
-        <div style="width: 14.28%">
-        <button class="mx-2 px-4 py-1 text-white rounded-lg hover:bg-blue-600" style="background-color: #fc8c2c">
-                <a href="/login">4D</a>
+        <div style="width: 25%">
+            <button class="mx-2 px-4 py-1 text-white rounded-lg hover:bg-blue-600 h-14 w-full" style="background-color: #fc8c2c">
+                <a href="/login">3D</a>
             </button>
         </div>
-        <div style="width: 14.28%">
-        <button class="mx-2 px-4 py-1 text-white rounded-lg hover:bg-blue-600" style="background-color: #fc8c2c">
-                <a href="/login">4D</a>
+        <div style="width: 25%">
+            <button class="mx-2 px-4 py-1 text-white rounded-lg hover:bg-blue-600 h-14 w-full" style="background-color: #fc8c2c">
+                <a href="/login">2D Depan</a>
             </button>
         </div>
-        <div style="width: 14.28%">
-        <button class="mx-2 px-4 py-1 text-white rounded-lg hover:bg-blue-600" style="background-color: #fc8c2c">
-                <a href="/login">4D</a>
-            </button>
-        </div>
-        <div style="width: 14.28%">
-        <button class="mx-2 px-4 py-1 text-white rounded-lg hover:bg-blue-600" style="background-color: #fc8c2c">
-                <a href="/login">4D</a>
-            </button>
-        </div>
-        <div style="width: 14.28%">
-        <button class="mx-2 px-4 py-1 text-white rounded-lg hover:bg-blue-600" style="background-color: #fc8c2c">
-                <a href="/login">4D</a>
-            </button>
-        </div>
-        
     </div>
+    <div class="flex gap-2 flex-row">
+        <div style="width: 25%">
+            <button class="mx-2 px-4 py-1 text-white rounded-lg hover:bg-blue-600 h-14 w-full" style="background-color: #fc8c2c">
+                <a href="/login">2D Belakang</a>
+            </button>
+        </div>
+        <div style="width: 25%">
+            <button class="mx-2 px-4 py-1 text-white rounded-lg hover:bg-blue-600 h-14 w-full" style="background-color: #fc8c2c">
+                <a href="/login">2D Tengah</a>
+            </button>
+        </div>
+        <div style="width: 25%">
+            <button class="mx-2 px-4 py-1 text-white rounded-lg hover:bg-blue-600 h-14 w-full" style="background-color: #fc8c2c">
+                <a href="/login">Pola tarung</a>
+            </button>
+        </div>
+        <div style="width: 25%">
+            <button class="mx-2 px-4 py-1 text-white rounded-lg hover:bg-blue-600 h-14 w-full" style="background-color: #fc8c2c">
+                <a href="/login">BB Campuran</a>
+            </button>
+        </div>
+    </div>
+</div>
+        
+        
+    
             
 
     
 
     <div class="bg-purple-700 border-2 border-white rounded-xl border border-white p-4">
         <h1 class="text-center my-4 text-2xl text-white">4D Macau</h1>
+        <h1 class="text-center my-4 text-lg  text-white">Pastikan Mengisi Angka Yang mau diisi Dahulu</h1>
 
         @if(session('success'))
             <div class="text-green-500">{{ session('success') }}</div>
@@ -94,7 +106,9 @@
                     <div class="flex">
                     <input type="number" id="angka{{ $i }}" name="angka{{ $i }}" class="border border-gray-300 px-2 py-1 rounded mx-2" oninput="validateInputLength('angka{{ $i }}', 'jumlah{{ $i }}')">
                     </div>
-                    <p class="text-2xl" style="text-align: center; color: white;"> x </p>
+                    <div class="align-right">
+                    <p class="text-2xl" style="ml-2 text-align: center; color: white;">      x </p>
+                    </div>
                     <div class="flex justify-center items-center">
                     <input type="number" id="jumlah{{ $i }}" name="jumlah{{ $i }}" class="w-1/2 border border-gray-300 px-2 py-1 rounded mx-2" disabled>
                     </div>
