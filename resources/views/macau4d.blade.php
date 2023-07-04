@@ -31,9 +31,52 @@
 <body>
 @include('layouts.navigation')
 
-<div class="flex flex-col items-center justify-center min-h-screen">
-    <div class="w-1/2">
-        <h1 class="text-center">Macau4D</h1>
+<div class="flex flex-col gap-y-4 items-center justify-center p-8" style="background-color: #fc8c2c">
+    
+    <div class="flex bg-purple-700 border-2 border-white rounded-xl border p-4  border-white">
+        <div style="width: 14.28%">
+        <button class="mx-2 px-4 py-1 text-white rounded-lg hover:bg-blue-600" style="background-color: #fc8c2c">
+                <a href="/login">4D</a>
+            </button>
+        </div>
+        <div style="width: 14.28%">
+        <button class="mx-2 px-4 py-1 text-white rounded-lg hover:bg-blue-600" style="background-color: #fc8c2c">
+                <a href="/login">4D</a>
+            </button>
+        </div>
+        <div style="width: 14.28%">
+        <button class="mx-2 px-4 py-1 text-white rounded-lg hover:bg-blue-600" style="background-color: #fc8c2c">
+                <a href="/login">4D</a>
+            </button>
+        </div>
+        <div style="width: 14.28%">
+        <button class="mx-2 px-4 py-1 text-white rounded-lg hover:bg-blue-600" style="background-color: #fc8c2c">
+                <a href="/login">4D</a>
+            </button>
+        </div>
+        <div style="width: 14.28%">
+        <button class="mx-2 px-4 py-1 text-white rounded-lg hover:bg-blue-600" style="background-color: #fc8c2c">
+                <a href="/login">4D</a>
+            </button>
+        </div>
+        <div style="width: 14.28%">
+        <button class="mx-2 px-4 py-1 text-white rounded-lg hover:bg-blue-600" style="background-color: #fc8c2c">
+                <a href="/login">4D</a>
+            </button>
+        </div>
+        <div style="width: 14.28%">
+        <button class="mx-2 px-4 py-1 text-white rounded-lg hover:bg-blue-600" style="background-color: #fc8c2c">
+                <a href="/login">4D</a>
+            </button>
+        </div>
+        
+    </div>
+            
+
+    
+
+    <div class="bg-purple-700 border-2 border-white rounded-xl border border-white p-4">
+        <h1 class="text-center my-4 text-2xl text-white">4D Macau</h1>
 
         @if(session('success'))
             <div class="text-green-500">{{ session('success') }}</div>
@@ -47,16 +90,19 @@
             @csrf
 
             @for ($i = 1; $i <= 10; $i++)
-                <div class="flex mb-4">
-                    <label for="angka{{ $i }}" class="w-16">Angka {{ $i }}:</label>
-                    <input type="number" id="angka{{ $i }}" name="angka{{ $i }}" class="border border-gray-300 px-2 py-1 rounded" oninput="validateInputLength('angka{{ $i }}', 'jumlah{{ $i }}')">
-                    <label for="jumlah{{ $i }}" class="w-16">Jumlah {{ $i }}:</label>
-                    <input type="number" id="jumlah{{ $i }}" name="jumlah{{ $i }}" class="border border-gray-300 px-2 py-1 rounded" disabled>
+                <div class="flex flex-row justify-center mb-4">
+                    <div class="flex">
+                    <input type="number" id="angka{{ $i }}" name="angka{{ $i }}" class="border border-gray-300 px-2 py-1 rounded mx-2" oninput="validateInputLength('angka{{ $i }}', 'jumlah{{ $i }}')">
+                    </div>
+                    <p class="text-2xl" style="text-align: center; color: white;"> x </p>
+                    <div class="flex justify-center items-center">
+                    <input type="number" id="jumlah{{ $i }}" name="jumlah{{ $i }}" class="w-1/2 border border-gray-300 px-2 py-1 rounded mx-2" disabled>
+                    </div>
                 </div>
             @endfor
 
             <div class="flex justify-center">
-                <button type="submit" class="bg-green-500 text-white px-4 py-2 rounded">Submit</button>
+                <button type="submit" class="text-white px-4 py-2 rounded" style="background-color: #fc8c2c">Submit</button>
             </div>
         </form>
     </div>
