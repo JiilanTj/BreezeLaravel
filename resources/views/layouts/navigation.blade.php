@@ -21,6 +21,9 @@
                     <x-nav-link :href="route('deposit')" :active="request()->routeIs('deposit')">
                         {{ __('Deposit') }}
                     </x-nav-link>
+                    <x-nav-link :href="route('withdraw')" :active="request()->routeIs('withdraw')">
+                        {{ __('Withdraw') }}
+                    </x-nav-link>
                 </div>
             </div>
 
@@ -58,6 +61,9 @@
                         <x-dropdown-link href="{{ route('deposit') }}">
                             Deposit
                         </x-dropdown-link>
+                        <x-dropdown-link href="{{ route('withdraw') }}">
+                            Withdraw
+                        </x-dropdown-link>
                         <!-- Authentication -->
                         <form method="POST" action="{{ route('logout') }}">
                             @csrf
@@ -94,6 +100,9 @@
             </x-responsive-nav-link>
             <x-responsive-nav-link :href="route('deposit')" :active="request()->routeIs('deposit')">
                         {{ __('Deposit') }}
+            </x-responsive-nav-link>
+            <x-responsive-nav-link :href="route('withdraw')" :active="request()->routeIs('withdraw')">
+                        {{ __('Withdraw') }}
             </x-responsive-nav-link>
         </div>
 

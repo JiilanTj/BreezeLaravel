@@ -8,6 +8,18 @@ use Illuminate\Http\Request;
 
 class BankController extends Controller
 {
+
+    /**
+     * Display the deposit page.
+     *
+     * @return View
+     */
+    public function index(): View
+    {
+        return view('deposit');
+    }
+
+
     public function showDepositPage()
 {
     $user = auth()->user();

@@ -4,6 +4,8 @@ use App\Http\Controllers\DepositController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BankController;
 use App\Http\Controllers\Macau4DController;
+use App\Http\Controllers\WithdrawController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -29,9 +31,14 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
 
-Route::get('/deposit',  [DepositController::class, 'index'])->name('deposit');
+
 Route::get('/deposit', [BankController::class, 'showDepositPage'])->name('deposit');
 Route::post('/simpan-transaksi', [BankController::class, 'simpanTransaksi'])->name('simpan.transaksi');
+
+Route::get('/withdraw', [WithdrawController::class, 'index'])->name('withdraw');
+Route::post('/simpan-transaksiwd', [WithdrawController::class, 'simpanTransaksiwd'])->name('simpan.transaksiwd');
+
+
 
 
 require __DIR__.'/auth.php';
