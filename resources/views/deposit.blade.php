@@ -10,8 +10,9 @@
 <body class="bg-gray-100">
 
             @include('layouts.navigation')
-        <div class="flex flex-row gap-x-4 items-center justify-center p-8" style="background-color: #fc8c2c">
-            <div class=" container bg-purple-700 gap-2 border-2 border-white rounded-xl border p-4 ">
+        <div class="flex lg:flex-row md:flex-col gap-x-4 gap-y-6 items-startjustify-center p-8" style="background-color: #fc8c2c">
+        <div class="flex flex-col bg-purple-700 gap-2 border-2 border-white rounded-xl border p-4 lg:w-1/2 md:w-full sm:w-full">
+
                 <h1 class="text-2xl font-bold text-white mb-4">Jumlah deposit</h1>
                 <p class="rounded-lg py-2 text-white mb-4 w-3/4">Tulis 100 jika Ingin Deposit 100.000 Rupiah</p>
 
@@ -38,7 +39,9 @@
                      </div>
                  </form>
             </div>
-            <div>
+            
+            <div class=" flex flex-col bg-purple-700 gap-2 border-2 border-white rounded-xl border p-4 lg:w-1/2 md:w-full sm:w-full ">
+                    <h1 class="text-2xl font-bold text-white mb-4">Jadwal Offline Bank</h1>
                 
             </div>
 
