@@ -1,5 +1,5 @@
 <head>
-    <title>Macau4D</title>
+    <title>Macau3D</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.15/dist/tailwind.min.css" rel="stylesheet">
     <style>
         body {
@@ -20,7 +20,7 @@
             var input = document.getElementById(inputId);
             var jumlah = document.getElementById(jumlahId);
 
-            if (input.value.length !== 4) {
+            if (input.value.length !== 3) {
                 jumlah.disabled = true;
             } else {
                 jumlah.disabled = false;
@@ -87,7 +87,7 @@
     
 
     <div class="bg-purple-700 border-2 border-white rounded-xl border border-white p-4">
-        <h1 class="text-center my-4 text-2xl text-white">4D Macau</h1>
+        <h1 class="text-center my-4 text-2xl text-white">3D Macau</h1>
         <h1 class="text-center my-4 text-lg  text-white">Pastikan Mengisi Angka Yang mau diisi Dahulu</h1>
 
         @if(session('success'))
@@ -98,7 +98,7 @@
             <div class="text-red-500">{{ session('error') }}</div>
         @endif
 
-        <form action="/macau4d/submit" method="POST">
+        <form action="/macau3d/submit" method="POST">
             @csrf
 
             @for ($i = 1; $i <= 10; $i++)
