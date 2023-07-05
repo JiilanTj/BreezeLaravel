@@ -6,6 +6,9 @@ use App\Http\Controllers\BankController;
 use App\Http\Controllers\Macau4DController;
 use App\Http\Controllers\Macau3DController;
 use App\Http\Controllers\WithdrawController;
+use App\Http\Controllers\Macau2DDepanController;
+use App\Http\Controllers\Macau2DTengahController;
+use App\Http\Controllers\Macau2DBelakangController;
 
 
 
