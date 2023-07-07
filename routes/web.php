@@ -27,6 +27,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+use App\Http\Controllers\AngkaController;
+
+Route::middleware(['auth'])->group(function () {
 Route::get('/macau4d', [Macau4DController::class, 'index']);
 Route::post('/macau4d/submit', [Macau4DController::class, 'submit']);
 
@@ -42,6 +45,16 @@ Route::post('/macau2dtengah/submit', [Macau2DTengahController::class, 'submit'])
 Route::get('/macau2dbelakang', [Macau2DBelakangController::class, 'index']);
 Route::post('/macau2dbelakang/submit', [Macau2DBelakangController::class, 'submit']);
 
+Route::get('/deposit', [BankController::class, 'showDepositPage'])->name('deposit');
+Route::post('/simpan-transaksi', [BankController::class, 'simpanTransaksi'])->name('simpan.transaksi');
+
+Route::get('/withdraw', [WithdrawController::class, 'index'])->name('withdraw');
+Route::post('/simpan-transaksiwd', [WithdrawController::class, 'simpanTransaksiwd'])->name('simpan.transaksiwd');
+
+});
+
+
+
 
 
 
@@ -51,11 +64,6 @@ Route::get('/dashboard', function () {
 })->middleware(['auth'])->name('dashboard');
 
 
-Route::get('/deposit', [BankController::class, 'showDepositPage'])->name('deposit');
-Route::post('/simpan-transaksi', [BankController::class, 'simpanTransaksi'])->name('simpan.transaksi');
-
-Route::get('/withdraw', [WithdrawController::class, 'index'])->name('withdraw');
-Route::post('/simpan-transaksiwd', [WithdrawController::class, 'simpanTransaksiwd'])->name('simpan.transaksiwd');
 
 
 
