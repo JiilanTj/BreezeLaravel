@@ -25,6 +25,7 @@
                                 <a href="/macau4d">
                                     <div class="p-4 rounded-lg h-full" style="background-color: #fc8c2c">
                                         <h1 class="text-xl font-semibold mb-2" style="color: #541493">Hongkong Pools</h1>
+                                        <h1 class="text-xl font-semibold mb-2" style="color: #ffffff">COMING SOON</h1>
                                         <div id="countdownhongkong" class="text-3xl text-white font-bold"></div>
                                     </div>
                                 </a>
@@ -35,6 +36,7 @@
                                 <a href="/macau4d">
                                     <div class="p-4 rounded-lg h-full" style="background-color: #fc8c2c">
                                         <h1 class="text-xl font-semibold mb-2" style="color: #541493">Sidney Pools</h1>
+                                        <h1 class="text-xl font-semibold mb-2" style="color: #ffffff">COMING SOON</h1>
                                         <div id="countdownsidney" class="text-3xl text-white font-bold"></div>
                                     </div>
                                 </a>
@@ -45,6 +47,7 @@
                                 <a href="/macau4d">
                                     <div class="p-4 rounded-lg h-full" style="background-color: #fc8c2c">
                                         <h1 class="text-xl font-semibold mb-2" style="color: #541493">Singapore Pools</h1>
+                                        <h1 class="text-xl font-semibold mb-2" style="color: #ffffff">COMING SOON</h1>
                                         <div id="countdownsgp" class="text-3xl text-white font-bold"></div>
                                     </div>
                                 </a>
@@ -57,6 +60,7 @@
                                 <a href="/macau4d">
                                     <div class="p-4 rounded-lg h-full" style="background-color: #fc8c2c">
                                         <h1 class="text-xl font-semibold mb-2" style="color: #541493">Oregon Pools</h1>
+                                        <h1 class="text-xl font-semibold mb-2" style="color: #ffffff">COMING SOON</h1>
                                         <div id="countdownmacau" class="text-3xl text-white font-bold"></div>
                                     </div>
                                 </a>
@@ -67,6 +71,7 @@
                                 <a href="/macau4d">
                                     <div class="p-4 rounded-lg h-full" style="background-color: #fc8c2c">
                                         <h1 class="text-xl font-semibold mb-2" style="color: #541493">Taiwan Pools</h1>
+                                        <h1 class="text-xl font-semibold mb-2" style="color: #ffffff">COMING SOON</h1>
                                         <div id="countdownhongkong" class="text-3xl text-white font-bold"></div>
                                     </div>
                                 </a>
@@ -77,6 +82,7 @@
                                 <a href="/macau4d">
                                     <div class="p-4 rounded-lg h-full" style="background-color: #fc8c2c">
                                         <h1 class="text-xl font-semibold mb-2" style="color: #541493">Tokyo Pools</h1>
+                                        <h1 class="text-xl font-semibold mb-2" style="color: #ffffff">COMING SOON</h1>
                                         <div id="countdownsidney" class="text-3xl text-white font-bold"></div>
                                     </div>
                                 </a>
