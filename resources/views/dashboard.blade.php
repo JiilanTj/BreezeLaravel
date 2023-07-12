@@ -9,29 +9,31 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 bg-white border-b border-gray-200">
-                    <div class="flex flex-row">
-                        <div style="width: 25%">
-                            <div class="h-full p-2">
-                                <a href="/macau4d">
-                                    <div class="p-4 rounded-lg h-full" style="background-color: #fc8c2c">
-                                        <h1 class="text-xl font-semibold mb-2" style="color: #541493">Macau Pools</h1>
-                                        <div id="countdownmacau" class="text-3xl text-white font-bold"></div>
-                                    </div>
-                                </a>
+                    <div class="flex flex-col md:flex-row">
+                        <div>
+                            <div style="w-1/2">
+                                <div class="h-full p-2">
+                                    <a href="/macau4d">
+                                        <div class="p-4 rounded-lg h-full" style="background-color: #fc8c2c">
+                                            <h1 class="text-xl font-semibold mb-2" style="color: #541493">Macau Pools</h1>
+                                            <div id="countdownmacau" class="text-3xl text-white font-bold"></div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div style="w-1/2">
+                                <div class="h-full p-2">
+                                    <a href="/macau4d">
+                                        <div class="p-4 rounded-lg h-full" style="background-color: #fc8c2c">
+                                            <h1 class="text-xl font-semibold mb-2" style="color: #541493">Hongkong Pools</h1>
+                                            <h1 class="text-xl font-semibold mb-2" style="color: #ffffff">COMING SOON</h1>
+                                            <div id="countdownhongkong" class="text-3xl text-white font-bold"></div>
+                                        </div>
+                                    </a>
+                                </div>
                             </div>
                         </div>
-                        <div style="width: 25%">
-                            <div class="h-full p-2">
-                                <a href="/macau4d">
-                                    <div class="p-4 rounded-lg h-full" style="background-color: #fc8c2c">
-                                        <h1 class="text-xl font-semibold mb-2" style="color: #541493">Hongkong Pools</h1>
-                                        <h1 class="text-xl font-semibold mb-2" style="color: #ffffff">COMING SOON</h1>
-                                        <div id="countdownhongkong" class="text-3xl text-white font-bold"></div>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                        <div style="width: 25%">
+                        <div style="w-1/2 md:w-1/4">
                             <div class="h-full p-2">
                                 <a href="/macau4d">
                                     <div class="p-4 rounded-lg h-full" style="background-color: #fc8c2c">
@@ -42,7 +44,7 @@
                                 </a>
                             </div>
                         </div>
-                        <div style="width: 25%">
+                        <div style="w-1/2 md:w-1/4">
                             <div class="h-full p-2">
                                 <a href="/macau4d">
                                     <div class="p-4 rounded-lg h-full" style="background-color: #fc8c2c">
