@@ -11,12 +11,13 @@
         <img src="{{ asset('assets/logo.png') }}" alt="Logo" class="h-full">
     </div>
         <div class="items-center md:flex-row gap-x-8 w-3/8">
-            <button class="bg-purple-800 mx-2 px-4 py-1 text-white rounded-lg hover:bg-blue-600">
-                <a href="/login">Masuk</a>
-            </button>
-            <button class="bg-purple-800 mx-2 px-4 py-1 text-white rounded-lg hover:bg-blue-600">
-                <a href="/register">Daftar</a>
-            </button>
+        <a href="/login">    
+        <button class="bg-purple-800 mx-2 px-4 py-1 text-white rounded-lg hover:bg-blue-600">
+                Masuk
+            </button></a>
+            <a href="/register"><button class="bg-purple-800 mx-2 px-4 py-1 text-white rounded-lg hover:bg-blue-600">
+                Daftar
+            </button></a>
         </div>
     </div>
     
