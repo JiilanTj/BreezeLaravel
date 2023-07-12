@@ -26,11 +26,13 @@
             <hr>
     
     <div class=" flex border-2 border-white rounded-2xl gap-y-4 items-center mx-8 p-8 flex-col mt-6">
+        
     <img src="https://mkupls.com/wp-content/uploads/2023/03/draw-kecil.gif" alt="" class="w-1/2 md:w-1/4">    
     <h1 class="text-white text-center text-xl md:text-3xl">Situs Togel  Dengan Hadiah Tertinggi</h1>
 
         
         <img src="{{ asset('assets/banner 1-2.png') }}" alt="Logo" class=" w-full md:w-1/2">
+        
 
         <h3 class="text-white">Toto Macau adalah salah satu jenis permainan judi yang sangat diminati di Indonesia. Permainan ini menawarkan kesempatan untuk memenangkan hadiah besar dengan menebak hasil pertandingan olahraga. Ada beberapa jenis pertandingan olahraga yang bisa dipilih, seperti sepak bola, bola basket, tenis, dan lainnya. Setiap pertandingan memiliki odds (peluang) tertentu yang menentukan jumlah hadiah yang bisa dimenangkan oleh pemain.
 
