@@ -20,12 +20,24 @@
             }
         </style>
     </head>
-    <body class="antialiased">
+    <body class="bg-black antialiased">
     @include('layouts.header')
             <hr>
     
-    <div>
-        <img src="{{ asset('assets/banner 1.png') }}" alt="Logo" class="">
+    <div class=" flex border-2 border-white rounded-2xl gap-y-4 items-center mx-8 p-8 flex-col mt-6">
+        <h1 class="text-white text-center text-xl md:text-3xl">Situs Togel  Dengan Hadiah Tertinggi</h1>
+
+        <img src="{{ asset('assets/banner 1-2.png') }}" alt="Logo" class=" w-full md:w-1/2">
+
+        <h3 class="text-white">Toto Macau adalah salah satu jenis permainan judi yang sangat diminati di Indonesia. Permainan ini menawarkan kesempatan untuk memenangkan hadiah besar dengan menebak hasil pertandingan olahraga. Ada beberapa jenis pertandingan olahraga yang bisa dipilih, seperti sepak bola, bola basket, tenis, dan lainnya. Setiap pertandingan memiliki odds (peluang) tertentu yang menentukan jumlah hadiah yang bisa dimenangkan oleh pemain.
+
+Salah satu hal yang membuat Toto Macau diminati oleh banyak orang adalah hadiah yang besar. Hadiah untuk permainan Toto Macau bisa mencapai ratusan juta rupiah atau bahkan lebih. Namun, untuk memenangkan hadiah tersebut, pemain harus benar-benar memahami cara kerja permainan dan memiliki strategi yang tepat.
+
+Selain itu, Toto Macau juga menawarkan pengalaman yang seru dan menantang bagi para pemainnya. Pemain harus memilih tim atau pemain yang menurut mereka memiliki peluang menang yang lebih besar. Selain itu, mereka juga harus memahami bagaimana faktor-faktor lain seperti kondisi cuaca, cedera, dan lainnya dapat mempengaruhi hasil pertandingan.
+
+Bagi pengunjung yang tertarik untuk mencoba Toto Macau, penting untuk mencari informasi dan sumber yang terpercaya. Sebelum memasang taruhan, pastikan Anda memahami cara kerja permainan dan memiliki strategi yang tepat. Selain itu, pastikan juga bahwa Anda hanya memasang taruhan pada situs yang resmi dan terpercaya seperti mkupls.com
+
+Dalam rangka memenangkan permainan Toto Macau, para pemain harus berhati-hati dan tidak terbawa emosi atau terlalu terburu-buru dalam membuat keputusan. Sebaiknya, lakukan riset dan analisis sebelum memasang taruhan dan pastikan bahwa taruhan yang Anda lakukan sesuai dengan strategi yang telah Anda buat.</h3>
     </div>
 
     
