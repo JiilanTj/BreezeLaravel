@@ -36,9 +36,7 @@
 <div class="flex flex-col bg-purple-700 gap-2 border-2 border-white rounded-xl border p-4">
     <div class="flex gap-2 flex-row">
         <div style="width: 25%">
-            <button class="mx-2 px-4 py-1 text-white rounded-lg hover:bg-blue-600 h-14 w-full" style="background-color: #fc8c2c">
-                <a href="/macau4d">4D</a>
-            </button>
+        <a href="/macau4d"><button class="mx-2 px-4 py-1 text-white rounded-lg hover:bg-blue-600 h-14 w-full" style="background-color: #fc8c2c">4D</button></a>
         </div>
         <div style="width: 25%">
             <button class="mx-2 px-4 py-1 text-white rounded-lg hover:bg-blue-600 h-14 w-full" style="background-color: #fc8c2c">

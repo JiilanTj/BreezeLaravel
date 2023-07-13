@@ -25,14 +25,34 @@
     @include('layouts.header')
             <hr>
     
-    <div class=" flex border-2 border-white rounded-2xl gap-y-4 items-center mx-8 p-8 flex-col mt-6">
+        
+    
+        
+<div class=" flex border-2 border-white rounded-2xl gap-y-4 items-center mx-2 md:mx-8 p-2 md:p-8 flex-col mt-6">
+            
         
         
-    <h1 class="text-[#fc8c2c] text-center text-xl md:text-4xl">Situs Togel  Dengan Hadiah Tertinggi</h1>
+    <h1 class="text-[#fc8c2c] text-center text-xl md:text-4xl animate-pulse">Situs Togel  Dengan Hadiah Tertinggi</h1>
+    <img src="{{ asset('assets/banner 1.png') }}" alt="Logo" class=" my-4 w-full ">
+    <div class="flex flex-row w-4/5">
+            <img src="{{ asset('assets/logosocmed/fb-01.png') }}" alt="Logo" class="w-1/4">
+            <img src="{{ asset('assets/logosocmed/ig-01.png') }}" alt="Logo" class="w-1/4">
+            <img src="{{ asset('assets/logosocmed/wa-01.png') }}" alt="Logo" class="w-1/4">
+            <img src="{{ asset('assets/logosocmed/tw-01.png') }}" alt="Logo" class="w-1/4">
 
+        </div>
         
         
-        <div class="flex flex-row w-full md:w-3/4">
+        <!-- <div class="flex flex-row">
+            <div class="flex flex-col">
+                <h3 class="text-sm md:text-l text-center text-white">TOTAL MEMBER</h3>
+                <h1 class="text-4xl text-center text-white">2965</h1>
+            </div>
+
+        </div> -->
+        
+        
+        <!-- <div class="flex flex-row w-full md:w-3/4">
             <div class="flex flex-col px-0 md:px-2 w-1/4">
                 <img src="{{ asset('assets/logodepan/aturan-01.png') }}" alt="Logo" class="">
             </div>
@@ -45,8 +65,78 @@
             <div class="flex flex-col px-0 md:px-2 w-1/4">
                 <img src="{{ asset('assets/logodepan/live-01.png') }}" alt="Logo" class="">
             </div>
-        </div>
-        <img src="{{ asset('assets/banner 1.png') }}" alt="Logo" class=" my-4 w-full ">
+        </div> -->
+
+        <!-- ini baris prediksi keluaran -->
+        <div class="flex flex-col gap-y-4 w-full">
+                <h1 class="text-white text-3xl md:text-5xl text-center animate-bounce">Keluaran Angka Terbaru</h1>
+                <div class="flex gap-x-2 md:gap-x-8 flex-row">
+                    <div class="flex flex-col w-1/2 border border-white">
+                        <h2 class="text-white text-center text-2xl md:text-3xl bg-gradient-to-b from-[#541690] to-fuchsia-500">Taiwan</h2>
+                        <div class="bg-[#FF8D29] h-full pt-2 md:pt-4">
+                            <h3 class="text-sm md:text-l text-center text-white">2023-07-13</h3>
+                            <h1 class="text-4xl text-center text-white">2965</h1>
+                        </div>
+                    </div>
+                    <div class="flex flex-col w-1/2 border border-white">
+                        <h2 class="text-white text-center text-2xl md:text-3xl bg-gradient-to-b from-[#541690] to-fuchsia-500">Macau</h2>
+                        <div class="bg-[#FF8D29] h-full pt-2 md:pt-4">
+                            <h3 class="text-sm md:text-l text-center text-white">2023-07-13</h3>
+                            <h1 class="text-4xl text-center text-white">8274</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex gap-x-2 md:gap-x-8 flex-row">
+                    <div class="flex flex-col w-1/2 border border-white">
+                        <h2 class="text-white text-center text-2xl md:text-3xl bg-gradient-to-b from-[#541690] to-fuchsia-500">Hongkong</h2>
+                        <div class="bg-[#FF8D29] h-full pt-2 md:pt-4">
+                            <h3 class="text-sm md:text-l text-center text-white">2023-07-13</h3>
+                            <h1 class="text-4xl text-center text-white">1736</h1>
+                        </div>
+                    </div>
+                    <div class="flex flex-col w-1/2 border border-white">
+                        <h2 class="text-white text-center text-2xl md:text-3xl bg-gradient-to-b from-[#541690] to-fuchsia-500">Sidney</h2>
+                        <div class="bg-[#FF8D29] h-full pt-2 md:pt-4">
+                            <h3 class="text-sm md:text-l text-center text-white">2023-07-13</h3>
+                            <h1 class="text-4xl text-center text-white">9481</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex gap-x-2 md:gap-x-8 flex-row">
+                    <div class="flex flex-col w-1/2 border border-white">
+                        <h2 class="text-white text-center text-2xl md:text-3xl bg-gradient-to-b from-[#541690] to-fuchsia-500">Singapore</h2>
+                        <div class="bg-[#FF8D29] h-full pt-2 md:pt-4">
+                            <h3 class="text-sm md:text-l text-center text-white">2023-07-13</h3>
+                            <h1 class="text-4xl text-center text-white">1231</h1>
+                        </div>
+                    </div>
+                    <div class="flex flex-col w-1/2 border border-white">
+                        <h2 class="text-white text-center text-2xl md:text-3xl bg-gradient-to-b from-[#541690] to-fuchsia-500">Oregon</h2>
+                        <div class="bg-[#FF8D29] h-full pt-2 md:pt-4">
+                            <h3 class="text-sm md:text-l text-center text-white">2023-07-13</h3>
+                            <h1 class="text-4xl text-center text-white">1992</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex gap-x-2 md:gap-x-8 flex-row">
+                    <div class="flex flex-col w-1/2 border border-white">
+                        <h2 class="text-white text-center text-2xl md:text-3xl bg-gradient-to-b from-[#541690] to-fuchsia-500">PCSO</h2>
+                        <div class="bg-[#FF8D29] h-full pt-2 md:pt-4">
+                            <h3 class="text-sm md:text-l text-center text-white">2023-07-13</h3>
+                            <h1 class="text-4xl text-center text-white">9471</h1>
+                        </div>
+                    </div>
+                    <div class="flex flex-col w-1/2 border border-white">
+                        <h2 class="text-white text-center text-2xl md:text-3xl bg-gradient-to-b from-[#541690] to-fuchsia-500">Jepang</h2>
+                        <div class="bg-[#FF8D29] h-full pt-2 md:pt-4">
+                            <h3 class="text-sm md:text-l text-center text-white">2023-07-13</h3>
+                            <h1 class="text-4xl text-center text-white">6318</h1>
+                        </div>
+                    </div>
+                </div>
+                       
+            </div>
+            <!-- batas baris keluaran -->
 
         <!-- <img src="https://mkupls.com/wp-content/uploads/2023/03/draw-kecil.gif" alt="" class="w-1/2 md:w-1/4"> -->
         
@@ -55,12 +145,16 @@
 
 Salah satu hal yang membuat Toto Macau diminati oleh banyak orang adalah hadiah yang besar. Hadiah untuk permainan Toto Macau bisa mencapai ratusan juta rupiah atau bahkan lebih. Namun, untuk memenangkan hadiah tersebut, pemain harus benar-benar memahami cara kerja permainan dan memiliki strategi yang tepat.
 
-Selain itu, Toto Macau juga menawarkan pengalaman yang seru dan menantang bagi para pemainnya. Pemain harus memilih tim atau pemain yang menurut mereka memiliki peluang menang yang lebih besar. Selain itu, mereka juga harus memahami bagaimana faktor-faktor lain seperti kondisi cuaca, cedera, dan lainnya dapat mempengaruhi hasil pertandingan.
+        </h3>
 
-Bagi pengunjung yang tertarik untuk mencoba Toto Macau, penting untuk mencari informasi dan sumber yang terpercaya. Sebelum memasang taruhan, pastikan Anda memahami cara kerja permainan dan memiliki strategi yang tepat. Selain itu, pastikan juga bahwa Anda hanya memasang taruhan pada situs yang resmi dan terpercaya seperti mkupls.com
 
-Dalam rangka memenangkan permainan Toto Macau, para pemain harus berhati-hati dan tidak terbawa emosi atau terlalu terburu-buru dalam membuat keputusan. Sebaiknya, lakukan riset dan analisis sebelum memasang taruhan dan pastikan bahwa taruhan yang Anda lakukan sesuai dengan strategi yang telah Anda buat.</h3>
     </div>
+    <a href="https://wa.me/xxxxxxxxxxx" target="_blank" rel="noopener noreferrer" class="fixed bottom-4 right-4">
+    <img src="{{ asset('assets/logowafloat.png') }}" alt="WhatsApp" class="w-12 h-12  shadow-lg hover:opacity-75">
+</a>
+
+    
+
 
     
     </body>

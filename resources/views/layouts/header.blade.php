@@ -7,10 +7,10 @@
 </head>
 <body>
     <div class="flex flex-col md:flex-row bg-black px-6 py-1 justify-between items-center">
-    <div class="h-16 py-2">
-        <img src="{{ asset('assets/logo.png') }}" alt="Logo" class=" float-center h-full">
+    <div class=" py-2">
+        <img src="{{ asset('assets/logo-1.png') }}" alt="Logo" class=" float-center h-24 md:h-16">
     </div>
-        <div class="items-center flex-row gap-x-8 mb-4 w-3/8">
+        <div class="items-center pt-2 flex-row gap-x-8 mb-4 w-3/8">
         <a href="/login">    
         <button class="bg-purple-800 mx-2 px-4 py-1 text-white rounded-lg hover:bg-blue-600">
                 Masuk
