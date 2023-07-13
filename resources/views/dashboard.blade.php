@@ -1,5 +1,9 @@
-<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.15/dist/tailwind.min.css" rel="stylesheet">
 
+<head>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.15/dist/tailwind.min.css" rel="stylesheet">
+<title>Dashboard MallTOTO</title>
+</head>
+<body>
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
@@ -161,3 +165,5 @@
 
         
     </script>
+
+</body>
