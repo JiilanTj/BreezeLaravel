@@ -27,6 +27,9 @@
                     <x-nav-link >
                     Saldo: Rp.{{ Auth::user()->saldo }}
                     </x-nav-link>
+                    <x-nav-link :href="route('changePassword')" :active="request()->routeIs('changePassword')">
+                        {{ __('My Profile') }}
+                    </x-nav-link>
                 </div>
             </div>
 

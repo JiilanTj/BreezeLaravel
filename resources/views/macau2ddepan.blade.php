@@ -33,57 +33,8 @@
 
 <div class="flex flex-col gap-y-4 items-center justify-center p-8" style="background-color: #fc8c2c">
     
-<div class="flex flex-col bg-purple-700 gap-2 border-2 border-white rounded-xl border p-4">
-    <div class="flex gap-2 flex-row">
-        <div style="width: 25%">
-            <button class="mx-2 px-4 py-1 text-white rounded-lg hover:bg-blue-600 h-14 w-full" style="background-color: #fc8c2c">
-                <a href="/macau4d">4D</a>
-            </button>
-        </div>
-        <div style="width: 25%">
-            <button class="mx-2 px-4 py-1 text-white rounded-lg hover:bg-blue-600 h-14 w-full" style="background-color: #fc8c2c">
-                <a href="/login">4D Campuran</a>
-            </button>
-        </div>
-        <div style="width: 25%">
-            <button class="mx-2 px-4 py-1 text-white rounded-lg hover:bg-blue-600 h-14 w-full" style="background-color: #fc8c2c">
-                <a href="/macau3d">3D</a>
-            </button>
-        </div>
-        <div style="width: 25%">
-            <button class="mx-2 px-4 py-1 text-white rounded-lg hover:bg-blue-600 h-14 w-full" style="background-color: #fc8c2c">
-                <a href="/macau2ddepan">2D Depan</a>
-            </button>
-        </div>
-    </div>
-    <div class="flex gap-2 flex-row">
-        <div style="width: 25%">
-            <button class="mx-2 px-4 py-1 text-white rounded-lg hover:bg-blue-600 h-14 w-full" style="background-color: #fc8c2c">
-                <a href="/macau2dbelakang">2D Belakang</a>
-            </button>
-        </div>
-        <div style="width: 25%">
-            <button class="mx-2 px-4 py-1 text-white rounded-lg hover:bg-blue-600 h-14 w-full" style="background-color: #fc8c2c">
-                <a href="/macau2dtengah">2D Tengah</a>
-            </button>
-        </div>
-        <div style="width: 25%">
-            <button class="mx-2 px-4 py-1 text-white rounded-lg hover:bg-blue-600 h-14 w-full" style="background-color: #fc8c2c">
-                <a href="/login">Pola tarung</a>
-            </button>
-        </div>
-        <div style="width: 25%">
-            <button class="mx-2 px-4 py-1 text-white rounded-lg hover:bg-blue-600 h-14 w-full" style="background-color: #fc8c2c">
-                <a href="/login">BB Campuran</a>
-            </button>
-        </div>
-    </div>
-</div>
+@include('headermacau')        
         
-        
-    
-            
-
     
 
     <div class="bg-purple-700 border-2 border-white rounded-xl border border-white p-4">
