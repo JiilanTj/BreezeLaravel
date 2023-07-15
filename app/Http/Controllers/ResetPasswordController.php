@@ -33,7 +33,7 @@ class ResetPasswordController extends Controller
             ->update(['password' => bcrypt($newPassword)]);
 
         if ($affectedRows === 1) {
-            return redirect()->back()->with('success', 'Password berhasil diubah.');
+            return redirect()->route('dashboard')->with('success', 'Password berhasil diubah.');
         } else {
             return redirect()->back()->with('error', 'Password gagal diubah.');
         }
