@@ -10,6 +10,7 @@ use App\Http\Controllers\Macau2DDepanController;
 use App\Http\Controllers\Macau2DTengahController;
 use App\Http\Controllers\Macau2DBelakangController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\ProfileViewController;
 
 
 /*
@@ -50,6 +51,8 @@ Route::post('/simpan-transaksi', [BankController::class, 'simpanTransaksi'])->na
 
 Route::get('/withdraw', [WithdrawController::class, 'index'])->name('withdraw');
 Route::post('/simpan-transaksiwd', [WithdrawController::class, 'simpanTransaksiwd'])->name('simpan.transaksiwd');
+
+Route::get('/profileview', [ProfileViewController::class, 'proview'])->name('profileview');
 
 Route::get('/change-password', [UserController::class, 'changePassword'])->name('changePassword');
 Route::post('/change-password', [UserController::class, 'changePasswordSave'])->name('postChangePassword');

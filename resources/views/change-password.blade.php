@@ -11,7 +11,7 @@
 @include('layouts.navigation')
     <div class="container mx-auto py-10">
         <div class="max-w-md mx-auto p-6 bg-white rounded shadow-md">
-            <h3 class="text-center text-2xl font-bold mb-4">Change Password</h3>
+            <h3 class="text-center text-2xl font-bold mb-4">Ubah Password</h3>
             @if($errors->any())
                 @foreach ($errors->all() as $error)
                     <div class="text-red-500">{{ $error }}</div>
@@ -26,15 +26,15 @@
             <form class="form" action="{{ route('postChangePassword') }}" method="post">
                 @csrf
                 <div class="mb-4">
-                    <label for="current_password" class="block mb-2 font-semibold">Current Password</label>
+                    <label for="current_password" class="block mb-2 font-semibold">Password Sebelumnya</label>
                     <input type="password" class="w-full p-2 border rounded" id="current_password" name="current_password">
                 </div>
                 <div class="mb-4">
-                    <label for="new_password" class="block mb-2 font-semibold">New Password</label>
+                    <label for="new_password" class="block mb-2 font-semibold">Password Baru</label>
                     <input type="password" class="w-full p-2 border rounded" id="new_password" name="new_password">
                 </div>
                 <div class="mb-6">
-                    <label for="new_password_confirmation" class="block mb-2 font-semibold">Confirm New Password</label>
+                    <label for="new_password_confirmation" class="block mb-2 font-semibold">Ulangi Password Baru</label>
                     <input type="password" class="w-full p-2 border rounded" id="new_password_confirmation" name="new_password_confirmation">
                 </div>
                 <button type="submit" class="w-full px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">Submit</button>
