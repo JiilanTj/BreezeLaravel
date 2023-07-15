@@ -11,6 +11,8 @@ use App\Http\Controllers\Macau2DTengahController;
 use App\Http\Controllers\Macau2DBelakangController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ProfileViewController;
+use App\Http\Controllers\LupaPasswordController;
+use App\Http\Controllers\ResetPasswordController;
 
 
 /*
@@ -60,7 +62,8 @@ Route::post('/change-password', [UserController::class, 'changePasswordSave'])->
 });
 
 
-
+Route::get('/lupapassword', [LupaPasswordController::class, 'lupapasswordview'])->name('lupapassword');
+Route::post('/lupapassword', [ResetPasswordController::class, 'reset'])->name('reset-password');
 
 
 

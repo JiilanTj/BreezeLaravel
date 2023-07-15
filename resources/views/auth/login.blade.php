@@ -1,3 +1,11 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+</head>
+<body>
+
 <x-guest-layout>
     <x-auth-card>
         <x-slot name="logo">
@@ -39,7 +47,7 @@
                     <span class="ml-2 text-sm text-gray-600">{{ __('Remember me') }}</span>
                 </label>
             </div>
-
+            <a href="{{ route('lupapassword') }}" class="ml-2 text-sm font-semibold text-purple-600"><br>Lupa Password?</a>
             <div class="flex items-center justify-end mt-4">
                
 
@@ -50,3 +58,6 @@
         </form>
     </x-auth-card>
 </x-guest-layout>
+    
+</body>
+</html>
