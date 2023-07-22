@@ -12,6 +12,7 @@ class ResetPasswordController extends Controller
         $username = $request->input('username');
         $last4Digit = $request->input('last_4_digit');
         $newPassword = $request->input('new_password');
+        $confirmNewPassword = $request->input('confirm_new_password');
 
         // Cari data pengguna berdasarkan username
         $user = DB::table('users')->where('username', $username)->first();
@@ -24,6 +25,11 @@ class ResetPasswordController extends Controller
         // Jika last4Digit tidak cocok
         if (substr($user->noRek, -4) !== $last4Digit) {
             return redirect()->back()->with('error', '4 digit terakhir salah.');
+        }
+
+        // Validasi konfirmasi password
+        if ($newPassword !== $confirmNewPassword) {
+            return redirect()->back()->with('error', 'Password baru dan konfirmasi password tidak sesuai.');
         }
 
 

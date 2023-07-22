@@ -24,7 +24,11 @@
                 </div>
                 <div class="mb-4">
                     <label for="new_password" class="block font-semibold mb-2">Password Baru</label>
-                    <input type="text" id="new_password" name="new_password" class="w-full p-2 border rounded">
+                    <input type="password" id="new_password" name="new_password" class="w-full p-2 border rounded">
+                </div>
+                <div class="mb-4">
+                    <label for="confirm_new_password" class="block font-semibold mb-2">Ulangi Password Baru</label>
+                    <input type="password" id="confirm_new_password" name="confirm_new_password" class="w-full p-2 border rounded">
                 </div>
                 <button type="submit" class="w-full px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">Reset Password</button>
             </form>
